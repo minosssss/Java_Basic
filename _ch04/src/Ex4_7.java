@@ -4,8 +4,8 @@ public class Ex4_7 {
 	public static void main(String[] args) {
 		int num = 0;
 		
-		// °ıÈ£ {} ¾ÈÀÇ ³»¿ëÀ» 5¹ø ¹İº¹ÇÑ´Ù.
-		for (int i = 1; i <= 20; i++) {  //1ºÎÅÍ, 20±îÁö, 1¾¿ Áõ°¡
+		// ê´„í˜¸ {} ì•ˆì˜ ë‚´ìš©ì„ 5ë²ˆ ë°˜ë³µí•œë‹¤.
+		for (int i = 1; i <= 20; i++) {  //1ë¶€í„°, 20ê¹Œì§€, 1ì”© ì¦ê°€
 //			System.out.println(Math.random()); 				0.0<=x<1.0
 //			System.out.println(Math.random()*10);			0.0<=x<10.0
 //			System.out.println((int)(Math.random()*10));	0<=x<10

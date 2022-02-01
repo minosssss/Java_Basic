@@ -10,7 +10,7 @@ public class Ex4_14_1 {
 			num = num / 10;
 		}
 		
-		System.out.println("°¢ ÀÚ¸®¼öÀÇ ÇÕ:"+sum);
+		System.out.println("Â°Â¢ Ã€ÃšÂ¸Â®Â¼Ã¶Ã€Ã‡ Ã‡Ã•:"+sum);
 	}
 
 }

@@ -1,14 +1,13 @@
-
 public class Ex5_1_str {
 
 	public static void main(String[] args) {
 		String str = "MINHO";
-		char ch = str.charAt(4); //(*) ÇØ´ç ¼ıÀÚ¸¸ Ãâ·Â
+		char ch = str.charAt(4); //(*) í•´ë‹¹ ìˆ«ìë§Œ ì¶œë ¥
 		System.out.println(ch);
 		
 		
-		String str2 = str.substring(1,4); // 1~3±îÁö
-		String str3 = str.substring(1); // 1ºÎÅÍ ³¡±îÁö
+		String str2 = str.substring(1,4); // 1~3ê¹Œì§€
+		String str3 = str.substring(1); // 1ë¶€í„° ëê¹Œì§€
 		System.out.println(str2);
 
 	}

@@ -4,13 +4,13 @@ public class Ex4_9 {
 
 	public static void main(String[] args) {
 		/*
-		 * switch¹®ÀÇ Á¶°Ç½Ä °á°ú´Â Á¤¼ö ¶Ç´Â ¹®ÀÚ¿­ÀÌ¾î¾ß ÇÑ´Ù. 
-		 * case¹®ÀÇ °ªÀº Á¤¼ö, »ó¼ö(¹®ÀÚÆ÷ÇÔ), ¹®ÀÚ¿­¸¸ °¡´ÉÇÏ¸ç Áßº¹µÇÁö ¾Ê¾Æ¾ßÇÑ´Ù.
+		 * switchë¬¸ì˜ ì¡°ê±´ì‹ ê²°ê³¼ëŠ” ì •ìˆ˜ ë˜ëŠ” ë¬¸ìì—´ì´ì–´ì•¼ í•œë‹¤. 
+		 * caseë¬¸ì˜ ê°’ì€ ì •ìˆ˜, ìƒìˆ˜(ë¬¸ìí¬í•¨), ë¬¸ìì—´ë§Œ ê°€ëŠ¥í•˜ë©° ì¤‘ë³µë˜ì§€ ì•Šì•„ì•¼í•œë‹¤.
 		 * 
-		 * ¿¡·¯ = º¯¼ö, ½Ç¼ö
+		 * ì—ëŸ¬ = ë³€ìˆ˜, ì‹¤ìˆ˜
 		 */
 
-		System.out.println("ÇöÀç ¿ùÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä. >");
+		System.out.println("í˜„ì¬ ì›”ì„ ì…ë ¥í•´ì£¼ì„¸ìš”. >");
 
 		Scanner scanner = new Scanner(System.in);
 		int month = scanner.nextInt();
@@ -19,20 +19,20 @@ public class Ex4_9 {
 		case 3:
 		case 4:
 		case 5:
-			System.out.println("ÇöÀçÀÇ °èÀıÀº º½ÀÔ´Ï´Ù.");
+			System.out.println("í˜„ì¬ì˜ ê³„ì ˆì€ ë´„ì…ë‹ˆë‹¤.");
 			break;
 		case 6:
 		case 7:
 		case 8:
-			System.out.println("ÇöÀçÀÇ °èÀıÀº ¿©¸§ÀÔ´Ï´Ù.");
+			System.out.println("í˜„ì¬ì˜ ê³„ì ˆì€ ì—¬ë¦„ì…ë‹ˆë‹¤.");
 			break;
 		case 9:
 		case 10:
 		case 11:
-			System.out.println("ÇöÀçÀÇ °èÀıÀº °¡À»ÀÔ´Ï´Ù.");
+			System.out.println("í˜„ì¬ì˜ ê³„ì ˆì€ ê°€ì„ì…ë‹ˆë‹¤.");
 			break;
 		default:
-			System.out.println("ÇöÀçÀÇ °èÀıÀº °Ü¿ïÀÔ´Ï´Ù.");
+			System.out.println("í˜„ì¬ì˜ ê³„ì ˆì€ ê²¨ìš¸ì…ë‹ˆë‹¤.");
 		}
 
 	}

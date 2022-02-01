@@ -8,7 +8,5 @@ public class Ex4_11 {
 				System.out.println(i+"*"+j+"="+(i*j));
 			}
 		}
-
 	}
-
 }

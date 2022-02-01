@@ -1,13 +1,12 @@
-
 public class Ex4_13 {
 
 	public static void main(String[] args) {
 		int sum = 0;
 		int i = 0;
-		//i¸¦ 1¾¿ Áõ°¡½ÃÄÑ¼­ sum¿¡ °è¼Ó ´õÇØ³ª°£´Ù.
+		//ië¥¼ 1ì”© ì¦ê°€ì‹œì¼œì„œ sumì— ê³„ì† ë”í•´ë‚˜ê°„ë‹¤.
 		while (sum<=100) {
 			System.out.printf("%d - %d%n", i, sum);
-			sum += ++i; //°ªÀÌ Áõ°¡ÇÏ°í ÀÛ¾÷ÀÌ ¼öÇà
+			sum += ++i; //ê°’ì´ ì¦ê°€í•˜ê³  ì‘ì—…ì´ ìˆ˜í–‰
 		}
 
 	}

@@ -4,21 +4,21 @@ public class Ex4_14 {
 
 	public static void main(String[] args) {
 		int num = 0, sum = 0;
-		System.out.println("¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä. (¿¹:12345)");
+		System.out.println("ìˆ«ìë¥¼ ì…ë ¥í•˜ì„¸ìš”. (ì˜ˆ:12345)");
 		
 		Scanner scanner = new Scanner(System.in);
 		String tmp = scanner.nextLine();
 		num = Integer.parseInt(tmp);
 		
-		while (num!=0) { // 0ÀÌ ¾Æ´Ò ¶§ ±îÁö ¹İº¹¹® ½ÇÇà
-			// numÀ» 10À¸·Î ³ª´« ³ª¸ÓÁö¿¡ sumÀ» ´õÇÔ
+		while (num!=0) { // 0ì´ ì•„ë‹ ë•Œ ê¹Œì§€ ë°˜ë³µë¬¸ ì‹¤í–‰
+			// numì„ 10ìœ¼ë¡œ ë‚˜ëˆˆ ë‚˜ë¨¸ì§€ì— sumì„ ë”í•¨
 			sum += num%10; // sum = sum + num%10;
 			System.out.printf("sum=%3d num=%d%n", sum, num);
 			
-			num /= 10;  // num = num / 10 ; numÀ» 10À¸·Î ³ª´« °ª
+			num /= 10;  // num = num / 10 ; numì„ 10ìœ¼ë¡œ ë‚˜ëˆˆ ê°’
 		}
 		
-		System.out.println("°¢ ÀÚ¸®¼öÀÇ ÇÕ:"+sum);
+		System.out.println("ê° ìë¦¬ìˆ˜ì˜ í•©:"+sum);
 
 	}
 

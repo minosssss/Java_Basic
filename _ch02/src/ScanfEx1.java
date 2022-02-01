@@ -10,7 +10,7 @@ public class ScanfEx1 {
 //		System.out.println(num);
 		
 		String input = scanner.nextLine();
-		int num = Integer.parseInt(input); // ÀÔ·Â¹ŞÀº ¹®ÀÚ¿­À» ¼ıÀÚ·Î º¯È¯
+		int num = Integer.parseInt(input); // ì…ë ¥ë°›ì€ ë¬¸ìì—´ì„ ìˆ«ìë¡œ ë³€í™˜
 		System.out.println(num);
 	}
 

@@ -3,14 +3,14 @@ import java.util.Scanner;
 public class Ex4_1 {
 
 	public static void main(String[] args) {
-		int score = 0;     //Á¡¼ö¸¦ ÀúÀåÇÏ±â À§ÇÑ º¯¼ö
-		char grade = 'D';  //ÇĞÁ¡À» ÀúÀåÇÏ±â À§ÇÑ º¯¼ö. °ø¹éÀ¸·Î ÃÊ±âÈ­
-						   //else¸¦ ¾²Áö ¾Ê±â À§ÇØ D·Î º¯È¯
+		int score = 0;     //ì ìˆ˜ë¥¼ ì €ì¥í•˜ê¸° ìœ„í•œ ë³€ìˆ˜
+		char grade = 'D';  //í•™ì ì„ ì €ì¥í•˜ê¸° ìœ„í•œ ë³€ìˆ˜. ê³µë°±ìœ¼ë¡œ ì´ˆê¸°í™”
+						   //elseë¥¼ ì“°ì§€ ì•Šê¸° ìœ„í•´ Dë¡œ ë³€í™˜
 		
-		System.out.println("Á¡¼ö¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä. >");
+		System.out.println("ì ìˆ˜ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”. >");
 		
 		Scanner scanner = new Scanner(System.in);
-		score = scanner.nextInt(); //È­¸éÀ» ÅëÇØ ÀÔ·Â¹ŞÀº ¼ıÀÚ¸¦ score¿¡ ÀúÀå
+		score = scanner.nextInt(); //í™”ë©´ì„ í†µí•´ ì…ë ¥ë°›ì€ ìˆ«ìë¥¼ scoreì— ì €ì¥
 //		String inputScore = scanner.nextLine();
 //		score = Integer.parseInt(inputScore);
 		
@@ -24,6 +24,6 @@ public class Ex4_1 {
 //		  else {
 //			grade = 'D';
 //		}
-		System.out.println("´ç½ÅÀÇ ÇĞÁ¡Àº "+ grade +"ÀÔ´Ï´Ù.");
+		System.out.println("ë‹¹ì‹ ì˜ í•™ì ì€ "+ grade +"ì…ë‹ˆë‹¤.");
 	}
 }

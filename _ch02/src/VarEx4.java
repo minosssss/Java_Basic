@@ -5,9 +5,9 @@ public class VarEx4 {
 		int x = 4, y = 2;
 		int tmp;
 		
-		tmp = x; //1. xÀÇ °ªÀ» tmp¿¡ ÀúÀå
-		x = y; 	 //2. yÀÇ °ªÀ» x¿¡ ÀúÀå
-		y = tmp; //3. tmpÀÇ °ªÀ» y¿¡ ÀúÀå
+		tmp = x; //1. xì˜ ê°’ì„ tmpì— ì €ìž¥
+		x = y; 	 //2. yì˜ ê°’ì„ xì— ì €ìž¥
+		y = tmp; //3. tmpì˜ ê°’ì„ yì— ì €ìž¥
 		
 		System.out.println("x="+x);
 		System.out.println("y="+y);
@@ -15,18 +15,18 @@ public class VarEx4 {
 
 }
 
-/* Java´Â µ¥ÀÌÅÍ¸¦ ´Ù·ç´Â ÃÖ¼Ò ´ÜÀ§°¡ 1byte = 8bit
- * ±âº»Çü 8°¡ÁöÅ¸ÀÔ
- * ³í¸®Çü_boolean(1byte) 		-> true¿Í falseÁß ÇÏ³ªÀÇ °ªÀ» °¡Áü
- * ¹®ÀÚÇü_char(2byte)    		-> 'ÇÏ' '³ª' ÀÇ ¹®ÀÚ¸¸ ÀúÀå °¡´É
- * Á¤¼öÇü_byte(1) short(2) 
- * 		int(4) long(8)		-> int(4byte)°¡ ÁÖ·Î »ç¿ëµÇ¸ç, longÀº ¾ÆÁÖ Å« Á¤¼ö
- * ½Ç¼öÇü_float(4) double(8)	-> ºÎµ¿¼Ò¼öÁ¡ Àû¿ë		 
+/* JavaëŠ” ë°ì´í„°ë¥¼ ë‹¤ë£¨ëŠ” ìµœì†Œ ë‹¨ìœ„ê°€ 1byte = 8bit
+ * ê¸°ë³¸í˜• 8ê°€ì§€íƒ€ìž…
+ * ë…¼ë¦¬í˜•_boolean(1byte) 		-> trueì™€ falseì¤‘ í•˜ë‚˜ì˜ ê°’ì„ ê°€ì§
+ * ë¬¸ìží˜•_char(2byte)    		-> 'í•˜' 'ë‚˜' ì˜ ë¬¸ìžë§Œ ì €ìž¥ ê°€ëŠ¥
+ * ì •ìˆ˜í˜•_byte(1) short(2) 
+ * 		int(4) long(8)		-> int(4byte)ê°€ ì£¼ë¡œ ì‚¬ìš©ë˜ë©°, longì€ ì•„ì£¼ í° ì •ìˆ˜
+ * ì‹¤ìˆ˜í˜•_float(4) double(8)	-> ë¶€ë™ì†Œìˆ˜ì  ì ìš©		 
  * 
- * ÂüÁ¶Çü Å¸ÀÔ
- * ÂüÁ¶Çü ±âº»ÇüÀ» Á¦¿ÜÇÑ ³ª¸ÓÁö String System
- * Date today; //ÂüÁ¶Çü º¯¼ö today¸¦ ¼±¾ð
+ * ì°¸ì¡°í˜• íƒ€ìž…
+ * ì°¸ì¡°í˜• ê¸°ë³¸í˜•ì„ ì œì™¸í•œ ë‚˜ë¨¸ì§€ String System
+ * Date today; //ì°¸ì¡°í˜• ë³€ìˆ˜ todayë¥¼ ì„ ì–¸
  * today = new Date(); 
- * //new Date(); -> °´Ã¼»ý¼º 
- * //today = new Date(); -> today¿¡ °´Ã¼ÀÇ ÁÖ¼Ò¸¦ ÀúÀå
+ * //new Date(); -> ê°ì²´ìƒì„± 
+ * //today = new Date(); -> todayì— ê°ì²´ì˜ ì£¼ì†Œë¥¼ ì €ìž¥
  */

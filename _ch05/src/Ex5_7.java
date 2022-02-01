@@ -1,7 +1,7 @@
 class Ex5_7 {
 	public static void main(String[] args) {
-		// args ÀÎÀÚ¸¦ ¹ŞÀ¸·Á¸é, Run Configurations ¶Ç´Â cmd¿¡¼­ class ÆÄÀÏ ½ÇÇà
-		System.out.println("¸Å°³º¯¼öÀÇ °³¼ö:"+args.length);
+		// args ì¸ìë¥¼ ë°›ìœ¼ë ¤ë©´, Run Configurations ë˜ëŠ” cmdì—ì„œ class íŒŒì¼ ì‹¤í–‰
+		System.out.println("ë§¤ê°œë³€ìˆ˜ì˜ ê°œìˆ˜:"+args.length);
 		for(int i=0;i< args.length;i++) {
 			System.out.println("args[" + i + "] = \""+ args[i] + "\"");
 		}
