@@ -9,6 +9,7 @@ public class Ex6_4 {
 		double resultDivide = math.divide(5L, 3L);
 		long maxNumber = math.max(5L, 3L);
 		long minNumber = math.min(5L, 3L);
+		math.printGugudan(12);
 		
 		System.out.println("add(5L, 3L) = " + resultAdd);
 		System.out.println("subtract(5L, 3L) = " + resultSubtract);
@@ -23,6 +24,16 @@ public class Ex6_4 {
 }
 
 class MyMath {
+	void printGugudan(int dan) {
+		if(!(2 <= dan && dan <= 9))
+			return;
+
+		for(int i=1; i<=9; i++) {
+			System.out.printf("%d * %d = %d%n", dan, i, dan * 1);
+		}
+		return; //반환 타입이 void 이므로 생략가능. 컴파일러가 자동추가
+	}
+	
 	long add(long a, long b) {
 		long result = a + b;
 		return result;

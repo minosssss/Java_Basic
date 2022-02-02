@@ -93,3 +93,59 @@ int result = add(3, 5); // int add(int x, int y)를 호출하고 결과를 resul
 1. main 메서드에서 메서드 `add` 를 호출한다. 인수 1L과 2L이 메서드 add의 매개변수 a,b에 각각 복사 (대입) 된다.
 2. 메서드 `add` 의 괄호 { } 안에 있는 문장들이 순서대로 수행된다.
 3. 메서드 `add` 의 모든 문장이 실행되거나 `return` 문을 만나면, 호출한 메서드(main 메서드)로 되돌아 와서 이후의 문장들을 실행한다.
+
+
+## retrun문
+
+> 실행 중인 메서드를 종료하고 호출한 곳으로 되돌아간다.
+> 
+- 반환 타입이 `void` 인 경우
+
+```java
+void printGugudan(int dan) {
+	if(!(2 < = dan && dan <= 9))
+			return;  //dan의 값이 2~9가 아닌경우, 호출한 곳으로 그냥 되돌아 간다.
+
+	for(int i=1; i<=9; i++) {
+			System.out.printf("%d * %d = %d%n", dan, i, dan * 1);
+	}
+	return; //반환 타입이 void 이므로 생략가능. 컴파일러가 자동추가
+}
+```
+
+- 반환 타입이 `void` 가 아닌 경우
+
+```java
+int multiply(int x, int y) {
+		int result = x * y;
+		return result; //반환 타입이 void가 아니므로 생략불가
+}
+
+int max(int a, int b) {
+		if (a > b)
+			return a; //조건식이 참일 때만 실행 된다. 참이 아닐 경우 에러 발생
+}
+```
+
+## 호출스택(call stack)
+
+> 스택(stack):밑이 막힌 상자. 위에 차곡차곡 쌓인다. First In Last Out
+> 
+- 메서드 수행에 필요한 메모리가 제공되는 공간
+- 메서드가 호출되면 호출스택에 메모리 할당, 종료되면 해제
+
+```java
+class Stack {
+	public static void main(String[] args) {
+		System.out.println("Hello");		
+	}
+}
+```
+
+![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/645d34cb-a8e9-461d-baff-7aaa40e152a2/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220202%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220202T144234Z&X-Amz-Expires=86400&X-Amz-Signature=15c3fb7006f5ed945d8624d714eb25d5b51d5ee63e9d8218e1f149c9d7b05b29&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
+
+1. 비어있는 상태
+2. `main` 메서드 실행
+3. `println` 호출되어 작업 실행 (`main` 대기)
+4. `println` 메모리 반환 후 `main` 메서드 실행상태
+5. 더 이상 실행할 게 없기 때문에 `main` 메서드가 없어지며, 프로그램 종료
