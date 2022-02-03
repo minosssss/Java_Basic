@@ -31,7 +31,7 @@ class Variables {
 
 ![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/358451c1-77e6-4296-953c-f57f42a3897d/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220202%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220202T132230Z&X-Amz-Expires=86400&X-Amz-Signature=a6df93c33f4b394a18d108614948afd42be458565ee8f218b3d5b4c5ae7e483b&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
 
-![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f5b96f98-71d5-4e85-ab0e-56a1ac2f7995/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220202%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220202T135608Z&X-Amz-Expires=86400&X-Amz-Signature=8c749b2fcd97ce3b6ef6efd4116779217a9d5c51a8c1570ceddc95ef8f75b1c6&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
+![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f5b96f98-71d5-4e85-ab0e-56a1ac2f7995/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220203%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220203T154416Z&X-Amz-Expires=86400&X-Amz-Signature=dd44fa238288f32cb18fef691e62dc8f7c3a28f42520e0d574e137da29a32211&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
 
 ### 사용방법
 
@@ -142,7 +142,7 @@ class Stack {
 }
 ```
 
-![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/645d34cb-a8e9-461d-baff-7aaa40e152a2/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220202%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220202T144234Z&X-Amz-Expires=86400&X-Amz-Signature=15c3fb7006f5ed945d8624d714eb25d5b51d5ee63e9d8218e1f149c9d7b05b29&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
+![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/645d34cb-a8e9-461d-baff-7aaa40e152a2/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220203%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220203T154509Z&X-Amz-Expires=86400&X-Amz-Signature=a21383013b2c1fd72c94f959d7523901265d420c438a8c7654b60ee8090a32f3&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
 
 1. 비어있는 상태
 2. `main` 메서드 실행
@@ -156,23 +156,24 @@ class Stack {
 - 기본형 매개변수 - 변수의 값을 읽기만 할 수 있다.**(read only)**
 
 ```java
+
 class Data { int x; }
 
 class Ex6_6 {
 	public static void main(String[] args) {		// 1
-		Data d = new Data();  						        // 2
-		d.x = 10;									                // 3
+		Data d = new Data();  						// 2
+		d.x = 10;								// 3
 		System.out.println("main() : x = " + d.x);	
 
-		change(d.x);								              // 메서드 실행
+		change(d.x);								// 7
 		System.out.println("After change(d.x)");
-		System.out.println("main() : x = " + d.x);// 7
+		System.out.println("main() : x = " + d.x);
 	}
 
-	static void change(int x) {  // 기본형			   // 4
-		x = 1000;													       	 // 5
+	static void change(int x) {  // 기본형			// 4
+		x = 1000;								// 5
 		System.out.println("change() : x = " + x);
-	} 																					 // 6
+	} 											// 6
 }
 ```
 
@@ -189,19 +190,19 @@ class Data2 { int x; }
 
 class Ex6_7 {
 	public static void main(String[] args) {		// 1
-		Data2 d = new Data2();										// 2
-		d.x = 10;																	// 3
+		Data2 d = new Data2();						// 2
+		d.x = 10;								// 3
 		System.out.println("main() : x = " + d.x);
 
-		change(d);																// 메서드실행
+		change(d);								// 메서드실행
 		System.out.println("After change(d)");
-		System.out.println("main() : x = " + d.x);// 7
+		System.out.println("main() : x = " + d.x);	// 7
 	}
 
 	static void change(Data2 d) { // 참조형			// 4
-		d.x = 1000;																// 5
+		d.x = 1000;								// 5
 		System.out.println("change() : x = " + d.x);
-	}																						// 6
+	}											// 6
 }
 ```
 
@@ -214,22 +215,22 @@ class Data3 { int x; }
 
 class Ex6_8 {
 	public static void main(String[] args) {	// 1
-		Data3 d = new Data3();									// 2
-		d.x = 10;																// 3
+		Data3 d = new Data3();					// 2
+		d.x = 10;							// 3
 
-		Data3 d2 = copy(d); 									// 4 (객체 생성 후, 메서드 실행), 
-																			// 9 (참조형이 반환되며 d2가 tmp(0x200)을 가르킨다.)
-																			// 10 대입 후 호출 완료
-		System.out.println("d.x ="+d.x);	// 11
-		System.out.println("d2.x="+d2.x);	// 11
+		Data3 d2 = copy(d); 					// 4 (객체 생성 후, 메서드 실행), 
+											// 9 (참조형이 반환되며 d2가 tmp(0x200)을 가르킨다.)
+											// 10 대입 후 호출 완료
+		System.out.println("d.x ="+d.x);		// 11
+		System.out.println("d2.x="+d2.x);		// 11
 	}
 
 	static Data3 copy(Data3 d) {				// 5 참조형 d가 생성 (main 메서드의 변수 d와는 다른 저장공간)
 		Data3 tmp = new Data3();    			// 6 (새로운 객체 tmp를 생성)
 
-		tmp.x = d.x;  										// 7 (d.x의 값을 tmp.x에 복사)
+		tmp.x = d.x;  						// 7 (d.x의 값을 tmp.x에 복사)
 
-		return tmp;   										// 8 (복사한 객체의 주소를 반환)
+		return tmp;   						// 8 (복사한 객체의 주소를 반환)
 	}
 }
 ```
