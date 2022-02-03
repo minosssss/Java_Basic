@@ -149,3 +149,89 @@ class Stack {
 3. `println` 호출되어 작업 실행 (`main` 대기)
 4. `println` 메모리 반환 후 `main` 메서드 실행상태
 5. 더 이상 실행할 게 없기 때문에 `main` 메서드가 없어지며, 프로그램 종료
+
+
+## 기본형 매개변수
+
+- 기본형 매개변수 - 변수의 값을 읽기만 할 수 있다.**(read only)**
+
+```java
+class Data { int x; }
+
+class Ex6_6 {
+	public static void main(String[] args) {		// 1
+		Data d = new Data();  						        // 2
+		d.x = 10;									                // 3
+		System.out.println("main() : x = " + d.x);	
+
+		change(d.x);								              // 메서드 실행
+		System.out.println("After change(d.x)");
+		System.out.println("main() : x = " + d.x);// 7
+	}
+
+	static void change(int x) {  // 기본형			   // 4
+		x = 1000;													       	 // 5
+		System.out.println("change() : x = " + x);
+	} 																					 // 6
+}
+```
+
+(`println` 스택은 편의상 제외) 
+
+![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/cfc739b2-60cd-4121-ac12-d923550bfbf0/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220203%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220203T153650Z&X-Amz-Expires=86400&X-Amz-Signature=e9157ed629b311e0ada1eb24aade2a6301b41fd9b08c1ca374eff58178e27ce9&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
+
+## 참조형 매개변수
+
+- 참조형 매개변수 - 변수의 값을 읽고 변경할 수 있다.**(read & write)**
+
+```java
+class Data2 { int x; }
+
+class Ex6_7 {
+	public static void main(String[] args) {		// 1
+		Data2 d = new Data2();										// 2
+		d.x = 10;																	// 3
+		System.out.println("main() : x = " + d.x);
+
+		change(d);																// 메서드실행
+		System.out.println("After change(d)");
+		System.out.println("main() : x = " + d.x);// 7
+	}
+
+	static void change(Data2 d) { // 참조형			// 4
+		d.x = 1000;																// 5
+		System.out.println("change() : x = " + d.x);
+	}																						// 6
+}
+```
+
+![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/49feb0ca-420e-4f92-85e3-0e4169ba83c3/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220203%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220203T153656Z&X-Amz-Expires=86400&X-Amz-Signature=84525b4970c9ccf64d61a8eefdcec9c13fa79a63e23f8a36360b9fc75f59ef84&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
+
+## 참조형 반환타입
+
+```java
+class Data3 { int x; }
+
+class Ex6_8 {
+	public static void main(String[] args) {	// 1
+		Data3 d = new Data3();									// 2
+		d.x = 10;																// 3
+
+		Data3 d2 = copy(d); 									// 4 (객체 생성 후, 메서드 실행), 
+																			// 9 (참조형이 반환되며 d2가 tmp(0x200)을 가르킨다.)
+																			// 10 대입 후 호출 완료
+		System.out.println("d.x ="+d.x);	// 11
+		System.out.println("d2.x="+d2.x);	// 11
+	}
+
+	static Data3 copy(Data3 d) {				// 5 참조형 d가 생성 (main 메서드의 변수 d와는 다른 저장공간)
+		Data3 tmp = new Data3();    			// 6 (새로운 객체 tmp를 생성)
+
+		tmp.x = d.x;  										// 7 (d.x의 값을 tmp.x에 복사)
+
+		return tmp;   										// 8 (복사한 객체의 주소를 반환)
+	}
+}
+```
+
+![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/85eaf1ca-6339-4119-9432-ff8c70d007ef/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220203%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220203T153658Z&X-Amz-Expires=86400&X-Amz-Signature=2f6b135b9bedacd327da41cb20486e1cd2ac37899e4232afc0eea26a3a2dffdd&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
