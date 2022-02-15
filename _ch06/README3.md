@@ -6,19 +6,47 @@
 
 > `iv` 사용여부로 구분한다!
 
-### 인스턴스 메서드
+### **인스턴스 메서드**
 
 - 인스턴스 생성 후 ‘참조변수.메서드이름()’ 으로 호출
 - 매개변수가 없기 때문에 `iv` 값을 써야 함 (반대로 `iv` 를 쓰기 때문에 매개변수가 필요 없음)
 - 메서드 내에서 인스턴스 변수 `iv` 사용 가능
 
-### `static` 메서드
+### **`static` 메서드**
 
-- 객체 생성없이 호출 가능한 메서드
+- 객체 생성없이 호출 가능한 메서드 ‘클래스이름.메서드이름()’ 으로 호출
 - 인스턴스변수`iv`를 사용하지 않을 때 붙임
 - 자기 작업에 필요한 값들을 매개변수`lv`로 받음 (그래서 `iv` 가 필요 없음)
 
-## 메서드 간의 호출과 참조
+```java
+
+class MyMath {
+	long a, b;
+	
+	long add() { //인스턴스 메서드
+		return a + b
+	}
+	
+	static long add(long a, long b) { //클래스메서드(static메서드)
+		return a + b;
+	}
+}
+
+class MathTest {
+    public static void main(String args[]) {
+        //클래스 메서드 호출 (객체 생성없이 바로 사용 가능)
+        System.out.println(Mymath.add(200L,100L));
+        
+        MyMath mm = new MyMath();  //인스턴스 생성
+        
+        mm.a = 200L;
+        mm.b = 100L;
+        System.out.println(mm.add()); // 인스턴스 메서드 호출
+    }
+}
+```
+
+## **메서드 간의 호출과 참조**
 
 > `static` 메서드는 언제나 인스턴스 변수와 메서드 호출이 불가능하다.
 > (호출 시점에 객체 생성여부를 알 수 없기 때문!)

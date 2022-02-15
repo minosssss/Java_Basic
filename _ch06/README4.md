@@ -22,7 +22,7 @@ class Car {
     int door;       // 문 개수
 
     Car() {}        //기본생성자
-    Car(String c, String g, int d) { //매개변수가 있느 생성자
+    Car(String c, String g, int d) { //매개변수가 있는 생성자
         color = c;      // white
         gearType = g;   // auto
         door = d;       // 4
@@ -82,13 +82,16 @@ class Car2 {
 	
 	// 생성자
 	Car2(String color, String gearType, int door) {
-		//참조변수 this
+		// 참조변수 this
 		// this.color 는 iv , color는 lv
+		// 이름이 같기 때문에 구별하기 위함
+		// iv와 lv가 이름이 다를 경우 생략 가능 (ex. Car2(String c) > color = c;
 		this.color = color;
 		this.gearType = gearType;
 		this.door = door;
 	}
 }
+
 
 public class Ex6_14 {
 	public static void main(String[] args) {
@@ -107,6 +110,15 @@ public class Ex6_14 {
 > 
 - `this` ▶인스턴스 자신을 가리키는 **참조변수**, 인스턴스 주소가 저장되어 있따. 모든 인스턴스 메서드에 지역벼수로 숨겨진 채로 존재한다.
 - `this()` / `this(매개변수)` ▶ **생성자**, 같은 클래스의 다른 생성자를 호출할 때 사용
+    - 클래스 이름 대신 this() 사용
+    
+    ```java
+    Car() {
+    		//Car("white", "auto", 4);
+    		this("white", "auto", 4);
+    }
+    ```
+    
 - 클래스 매서드에서는 사용할 수 없다.
 
 ## 변수의 초기화
@@ -137,7 +149,7 @@ class Car {
 ```
 
 - 참조변수 유의할 점!
-    - 참조형 변수는 `null(기본값l` 또는 `객체주소` 로 초기화 된다.
+    - 참조형 변수는 `null(기본값)` 또는 `객체주소` 로 초기화 된다.
     - `Engine e;` 만 할 경우도 초기화는 맞지만,  꼭 객체를 생성하여 넣어준다!
 
 ### 2. 초기화 블럭
@@ -177,8 +189,10 @@ class StaticBlockTest {
 
 ### 초기화 시점
 
-- 클래스 변수 초기화 시점: 클래스가 처음 로딩 될 때 단 한번! (메모리에 올라 갈 때)
-- 인스턴스 변수 초기화 시점: 인스턴스가 생성될 때 마다
+- 클래스변수 `cv` 가 먼저 초기화 된다!
+    - 클래스가 처음 로딩 될 때 단 한번! (메모리에 올라 갈 때)
+- 인스턴스 변수
+    - 인스턴스가 생성될 때 마다
 
 ```java
 class InitTest {
@@ -196,4 +210,4 @@ class InitTest {
 
 `InitTest it = new InitTest();` 실행 시,
 
-![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/7c65b3b8-8b5b-429b-9ad9-833b24b967d3/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220212%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220212T133039Z&X-Amz-Expires=86400&X-Amz-Signature=e3eb36007ab6ce0fbb50a9bed31ae8275ef711a90b8559d25a0f83b108da2661&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
+![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/7c65b3b8-8b5b-429b-9ad9-833b24b967d3/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220215T132920Z&X-Amz-Expires=86400&X-Amz-Signature=e338dc5a4f1c79ecd911bedd8b5155f12f05e24cd6e8300f85af752d7f323f2a&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
