@@ -153,17 +153,43 @@ public class TimeTest {
     - 자손 타입의 참조 변수로 조상 타입의 객체를 가르킬 수 없다.
     - 실제 가지고 있는 멤버 갯수보다 리모컨 버튼이 많기 때문에!
 
+```jsx
+class Tv {
+		// 속성: 크기, 길이, 높이, 색상, 볼륨, 채널 등
+		String color;  // 색깔
+		boolean power; // 전원상태
+		int channel;   // 채널
+		
+		// 기능: 켜기, 끄기, 볼륨, 높이기, 볼륨 낮추기, 채널 변경 등
+		void power()        { power = !power; }
+		void channelUp()    { channel++; }
+		void channelDown()  { channel--; }
+}
+
+class SmartTv extends Tv {  // SmartTv는 Tv에 캡션(자막)을 보여주는 기능을 한다.
+	boolean caption;    	// 캡션 상태(on/off)
+	void displayCaption(String text) {
+		if (caption) {      // 캡션 상태가 on(true)일 때만 text를 보여준다.
+			System.out.println(text);
+		}
+	}
+}
+```
+
 ```java
 // TV = 조상, SmartTv = 자손 
 
 Tv t = new SmartTv();  //  OK! 허용
-SmartTv s = New Tv();  //  에러! 허용 안 됨
+SmartTv s = new Tv();  //  에러! 허용 안 됨
 ```
 
 ### 참조변수의 형변환
 
 - 사용할 수 있는 멤버의 갯수를 조절하는 것
 - 조상 / 자손 관계 (상속관계) 의 참조변수는 서로 형변환 가능
+    - 감소하는 형변환은 생략 가능
+    - 증가하는 형변환은 생략 불가
+    - 단, 명확하게 하기 위해 2개 모두 써주도록 하자~!
 
 ```java
 class Car { }
