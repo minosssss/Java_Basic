@@ -117,3 +117,68 @@ int i      = Integer.parseInt("100");  // "100"을 100으로 변환하는 방법
 int i2     = Integer.valueOf("100");   // "100"을 100으로 변환하는 방법2
 Integer i2 = Integer.valueOf("100");   // 원래는 반환 타입이 Integer
 ```
+
+# 9-21~24
+
+## StringBuilder
+
+- StringBuilder는 동기화 되어있지 않다. 싱글 쓰레드에 적합
+- StringBuffer는 동기화되어 있다. 멀티 쓰레드에 안전(thread-safe)
+- 멀티 쓰레드 프로그램이 아닌 경우, 동기화는 불필요한 성능저하를 유발
+    - 이럴 때 StringBuffer대신 StringBuilder를 사용하면 성능향상
+
+## Math클래스
+
+- 수학관련 `static` 메서드의 집합 (iv_인스턴스변수를 만들필요 없음)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e73071b2-4e38-49da-a675-4fafbf846216/Untitled.png)
+
+- `abs` = 절대값 구하기
+- `ceil` = 올림
+- `floor` = 내림
+- `max` = 큰 값 (최대 값)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/59889dd8-b8ce-4947-8a21-3d1a619a4126/Untitled.png)
+
+- `min` = 작은 값 (최소 값)
+- `random` = 난수(지정 된 범위)
+- `rint`, `round` = 반올림 (계산적으로는 `rint`가 오차범위가 적다.)
+
+# 9-25~31
+
+## 래퍼(wrapper) 클래스
+
+- 8개의 기본형을 객체로 다뤄야할 떄 사용하는 클래스 (기본형 값을 감싸는 클래스)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/abd2111f-2d32-4457-93c4-e7d69b44e865/Untitled.png)
+
+## Number 클래스
+
+- 모든 숫자 래퍼 클래스의 조상
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1cd1557f-b22d-4f4a-8164-91cd0f5dfcd7/Untitled.png)
+
+- BigInteger (아주 큰 정수), BigDecimal (아주 큰 실수)
+
+## 문자열을 숫자로 변환하기
+
+- 문자열을 숫자로 변환하는 다양한 방법
+
+```java
+int i      = new Integer("100").intValue(); // floatValue(), LongValue(), ...
+int i2     = Integer.parseInt("100");
+Integer i3 = Integer.valueOf("100");  // int i3 로 사용해도 됨
+```
+
+- n진법의 문자열을 숫자로 변환하는 방법
+
+```java
+int 변수 = Integer.parseInt( 바꿀 숫자 , 바꿀 진수 )
+```
+
+## 오토박싱 & 언박싱
+
+- JDK1.5 이전에는 기본형과 참조형간의 연산이 불가능했지만, 
+컴파일 시 참조형에 `intValue();` 를 붙여주어 연산이 가능하게 한다.
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b0856a2d-d98d-4a48-a104-936b56457d3f/Untitled.png)
